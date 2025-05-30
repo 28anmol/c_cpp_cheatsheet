@@ -2,7 +2,7 @@
 
 *An important documentation which runs through most important compilation commands for C/C++ through CLI, concept of Make, Makefiles, CMake and CMakeLists.txt. WIP...*
 
-C++ is mostly backward compatible with C: most of the C code/syntax is supported in a c++ file. 
+C++ is mostly backward compatible with C: most of the C code/syntax is supported in a c++ file. All the codes written in C/C++ are stored in your storage but when you execute them, all variable memory allocation, execution of the program is done on RAM itself.
 
 Tools needed for running C/C++ code on your system:
 - Text Editor(VS Code)
