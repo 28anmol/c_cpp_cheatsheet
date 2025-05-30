@@ -1,6 +1,6 @@
 # C/C++ Cheatsheet
 
-An important documentation which runs through most important compilation commands for C/C++ through CLI, concept of Make, Makefiles and CMake and CMakeLists.txt
+*An important documentation which runs through most important compilation commands for C/C++ through CLI, concept of Make, Makefiles and CMake and CMakeLists.txt. WIP...*
 
 C++ is mostly backward compatible with C: most of the C code/syntax is supported in a c++ file. 
 
