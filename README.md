@@ -67,6 +67,178 @@ project-name/
 └── LICENSE               # License (optional)
 ```
 
+```graphql
+project-name/
+├── build/                      # 🔧 Build output (excluded in .gitignore)
+├── bin/                        # 🗃️ Final binaries go here
+├── lib/                        # 📦 Compiled static/shared libraries
+├── include/                    # 🌐 Public headers (for library users)
+│   └── project_name/           # Namespaced includes (e.g., <project_name/foo.h>)
+│       ├── project.h
+│       ├── utils.h
+│       └── module1.h
+├── src/                        # 💻 Internal source files
+│   ├── main.c / main.cpp       # Entry point (if building app)
+│   ├── project.c / .cpp        # Shared library logic
+│   ├── utils.c
+│   └── module1.c
+├── internal/                   # 🚫 Private/internal headers (non-installed)
+│   ├── config.h
+│   └── defs.h
+├── examples/                   # 🧪 Example programs using your library
+│   ├── example1.c
+│   └── example2.cpp
+├── tests/                      # ✅ Unit & integration tests
+│   ├── test_main.c
+│   ├── test_utils.c
+│   └── mocks/
+│       └── mock_file_io.c
+├── tools/                      # 🛠️ Helper scripts (formatting, codegen, etc.)
+│   ├── format.sh
+│   └── ci_build.sh
+├── cmake/                      # ⚙️ Custom CMake modules/macros
+│   └── FindMyDep.cmake
+├── docs/                       # 📚 Documentation (API, diagrams, architecture)
+│   ├── README.md
+│   ├── API.md
+│   └── diagrams/
+│       └── arch.png
+├── .vscode/                    # 🧠 VSCode configs (optional)
+│   ├── settings.json
+│   ├── tasks.json
+│   └── launch.json
+├── .gitignore                  # 🚫 Ignore rules (build/, *.o, *.bin, etc.)
+├── README.md                   # 🏁 Project overview, build instructions, usage
+├── LICENSE                     # 🧾 License file
+├── Makefile                    # 🧱 Optional: legacy/simple builds
+├── CMakeLists.txt              # 📐 Top-level CMake file
+└── package/                    # 📦 Optional: build artifacts for distribution
+    ├── include/
+    ├── lib/
+    ├── README.md
+    └── version.txt
+```
+
+
+```graphql
+project-name/
+├── build/                      # Build output directory (gitignored)
+├── bin/                        # Compiled binary executables
+├── lib/                        # Static/shared library output
+├── cmake/                      # CMake helper modules/macros
+│   └── FindSomeDependency.cmake
+├── config/                     # Config files, e.g. JSON/XML/toml
+│   └── default_config.json
+├── docs/                       # Documentation (Markdown or Doxygen)
+│   ├── index.md
+│   └── diagrams/
+│       └── system_architecture.puml
+├── examples/                   # Example apps/demos using your library
+│   ├── minimal.cpp
+│   └── advanced.cpp
+├── external/                   # External libraries (submodules or downloaded)
+│   └── catch2/
+├── include/                    # Public headers for your library (installed)
+│   └── project_name/
+│       ├── project.hpp
+│       ├── module1.hpp
+│       └── utils.hpp
+├── internal/                   # Private/internal headers
+│   ├── pch.hpp                 # Precompiled headers
+│   └── detail/
+│       └── unsafe_impl.hpp
+├── modules/                    # C++20 module files (if applicable)
+│   ├── project_name.ixx
+│   └── math_utils.ixx
+├── src/                        # Library + Application sources
+│   ├── main.cpp                # Entry point (optional CLI app)
+│   ├── project.cpp
+│   ├── module1.cpp
+│   └── utils.cpp
+├── tests/                      # Unit and integration tests
+│   ├── test_main.cpp
+│   ├── test_module1.cpp
+│   └── mocks/
+│       └── fake_logger.hpp
+├── tools/                      # Scripts and tooling (linters, codegen, etc.)
+│   ├── generate_docs.sh
+│   └── run_static_analysis.py
+├── scripts/                    # Build, install, deploy scripts
+│   ├── build_debug.sh
+│   ├── build_release.sh
+│   └── ci_setup.sh
+├── .vscode/                    # VSCode settings (optional)
+│   ├── settings.json
+│   ├── launch.json
+│   └── tasks.json
+├── .github/                    # GitHub actions (CI/CD workflows)
+│   └── workflows/
+│       └── build.yml
+├── .gitignore                  # Ignore build/, logs, etc.
+├── CMakeLists.txt              # Top-level CMake
+├── README.md                   # Project description & usage
+├── LICENSE                     # License file (MIT, Apache, etc.)
+└── Doxyfile                    # Doxygen config file (optional)
+```
+
+```graphql
+project-name/
+├── build/                      # 🔧 All build artifacts (ignored by Git)
+├── bin/                        # 🏁 Final executables (.out, .elf)
+├── lib/                        # 📦 Compiled libraries (.a, .so)
+├── obj/                        # 🔩 Intermediate object files (.o)
+├── cmake/                      # ⚙️ CMake helper modules/macros
+│   └── FindCustomLib.cmake
+├── config/                     # ⚙️ JSON/TOML/XML configuration files
+│   └── default_config.json
+├── docs/                       # 📚 Documentation (Markdown or Doxygen)
+│   ├── README.md
+│   └── diagrams/
+│       └── architecture.png
+├── examples/                   # 🧪 Example programs showing how to use your library
+│   ├── minimal.c
+│   └── advanced_usage.c
+├── external/                   # 🧩 External dependencies (manually or via submodules)
+│   └── cmocka/
+├── include/                    # 🌐 Public header files (installed with lib)
+│   └── project_name/
+│       ├── project.h
+│       ├── module1.h
+│       └── utils.h
+├── internal/                   # 🚫 Private headers (used only inside project)
+│   ├── config.h
+│   └── detail/
+│       └── unsafe_impl.h
+├── src/                        # 💻 C source files
+│   ├── main.c                  # Entry point (for CLI apps)
+│   ├── project.c
+│   ├── module1.c
+│   └── utils.c
+├── tests/                      # ✅ Unit and integration tests
+│   ├── test_main.c
+│   ├── test_module1.c
+│   └── mocks/
+│       └── mock_io.c
+├── tools/                      # 🛠️ Helper scripts/tools (e.g. codegen, style checks)
+│   ├── format.sh
+│   └── run_static_analysis.sh
+├── scripts/                    # 📜 Build/deploy/test/package automation
+│   ├── build.sh
+│   ├── run_tests.sh
+│   └── install.sh
+├── .github/                    # 🐙 CI/CD (GitHub Actions)
+│   └── workflows/
+│       └── build.yml
+├── .vscode/                    # 🧠 VSCode settings (optional)
+│   ├── settings.json
+│   └── tasks.json
+├── .gitignore                  # 🙈 Ignore build/ and temp files
+├── CMakeLists.txt              # 📐 Top-level CMake
+├── Makefile                    # 🧱 Optional alternative to CMake
+├── README.md                   # 🏁 Project info, build instructions
+├── LICENSE                     # 📄 Project license
+└── Doxyfile                    # 📘 Optional Doxygen config
+```
 
 ### C/C++ Compilation Steps
 
